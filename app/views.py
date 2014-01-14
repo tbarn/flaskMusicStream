@@ -13,7 +13,7 @@ def index():
 @app.route('/upload', methods=['GET','POST'])
 def upload_song():
     if request.method == 'POST':
-    	logging.debug('if request.method == 'POST': is TRUE')
+    	logging.debug('if request.method == POST: is TRUE')
         file = request.files['file']
         if file.filename:
             filename = secure_filename(file.filename)
